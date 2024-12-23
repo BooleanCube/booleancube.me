@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-gradient {
+    @apply bg-gradient-to-br from-accent via-secondary to-accent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-glow {
+    text-shadow: 0 0 72px theme(colors.purple.200 / 65%), 0 0 24px theme(colors.purple.200 / 24%);
+}
