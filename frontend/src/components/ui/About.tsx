@@ -14,7 +14,7 @@ const About: React.FC = () => {
         </p>
         <Image
           src={Flick}
-          alt="Brittany Chiang"
+          alt="Samarth Upadhya"
           className="w-64 h-64 rounded-full mt-6 md:mt-0 md:ml-10"
         />
       </div>

@@ -10,7 +10,8 @@ const HollowButton: React.FC<HollowButtonProps> = (props: HollowButtonProps) => 
   return (
     <h3><a
       href={props.hrefValue}
-      className={"border border-primary px-4 py-2 rounded hover:bg-secondary hover:text-accent " + (props.fancy ? "button-3d" : "")}
+      className={"button " + (props.fancy ? "button-3d" : "")}
+      style={{ userSelect: "none" }}
       data-no-underline
     >
       {props.content}
