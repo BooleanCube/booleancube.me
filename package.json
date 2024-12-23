@@ -1,0 +1,35 @@
+{
+  "name": "booleancube.me",
+  "version": "1.0.0",
+  "description": "maintained portfolio website of booleancube",
+  "main": "backend/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BooleanCube/booleancube.me.git"
+  },
+  "keywords": [],
+  "author": "BooleanCube",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/BooleanCube/booleancube.me/issues"
+  },
+  "homepage": "https://github.com/BooleanCube/booleancube.me#readme",
+  "dependencies": {
+    "booleancube.me": "file:",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
