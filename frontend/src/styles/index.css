@@ -1,0 +1,80 @@
+@import './globals.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+@import './style.css';
+
+@layer base {
+  body {
+    @apply bg-background text-text font-inter; /* Default background and text color */
+  }
+
+  h1, h2, h4, h5, h6 {
+    @apply text-gradient;
+    @apply text-glow;
+    @apply font-poppins;
+  }
+
+  h3 {
+    @apply font-work;
+  }
+
+  p {
+    @apply text-text font-inter; /* Default paragraph color */
+  }
+
+  a {
+    @apply relative text-accent;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    width: 0%; /* Initially no underline */
+    height: 2px; /* Thickness of the underline */
+    @apply bg-accent left-0 bottom-0;
+    transition: width 0.3s ease; /* Smooth width transition */
+  }
+  
+  /* On hover, slide the underline */
+  a:hover::after {
+    width: 100%;
+  }
+
+  /* Exclude links with the 'data-no-underline' attribute */
+  a[data-no-underline]::after {
+    content: none;
+  }
+
+  a:focus {
+    outline: none;
+  }
+
+}
+
+/* Basic button styles */
+.button-3d {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 3px theme(colors.purple.400); /* Simulates depth */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover effect */
+.button-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px theme(colors.purple.400), 0 0 8px theme(colors.purple.500);
+}
+
+/* Button pressed effect */
+.button-3d:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px theme(colors.purple.400);
+}

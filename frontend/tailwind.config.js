@@ -77,7 +77,20 @@ export default {
           950: '#0b0119',
           DEFAULT: '#aa6dfc',
         },
+        // its scuffed, ik, but deal with it
+        purple: {
+          100: '#c2a6e5', // text
+          200: '#0a0618', // background
+          300: '#8a5cf6', // primary
+          400: '#5b3dbf', // secondary
+          500: '#aa6dfc', // accent
+        }
       },
+    },
+    fontFamily: {
+      work: ["Work Sans", "serif"],
+      inter: ["Inter", "serif"],
+      poppins: ["Poppins", "serif"],
     },
   },
   plugins: [],

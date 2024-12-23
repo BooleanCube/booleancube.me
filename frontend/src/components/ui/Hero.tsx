@@ -1,4 +1,6 @@
 import React from "react";
+import { TypeAnimation } from 'react-type-animation';
+import HollowButton from "./HollowButton";
 
 const Hero: React.FC = () => {
   return (
@@ -6,18 +8,33 @@ const Hero: React.FC = () => {
       id="hero"
       className="min-h-screen flex flex-col justify-center items-start container mx-auto px-4"
     >
-      <p className="text-secondary">Hi, my name is</p>
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">BooleanCube.</h1>
-      <h2 className="text-3xl md:text-5xl font-bold text-text">I build things.</h2>
-      <p className="mt-6 max-w-2xl">
-        I'm a software engineer. yada yada yada...
+      <h3 className="text-secondary font-work text-xl">Hey there! I am</h3>
+      <h1 className="text-6xl font-bold">BooleanCube</h1>
+
+      <h2 className="text-3xl md:text-5xl font-bold text-text">
+        <TypeAnimation
+          sequence={[
+            "a Software Developer.", 3000,
+            "a Competitive Programmer.", 3000,
+            "an OSS Contributor.", 3000,
+            "an Avid Researcher.", 3000,
+            "a QA Volunteer.", 3000,
+            "an Astronomy Enthusiast.", 3000,
+            "a Competitive Athlete.", 3000,
+            "a Huge Weeb.", 3000
+          ]}
+          speed={20}
+          repeat={Infinity}
+        />
+      </h2>
+      <p className="py-2 mt-2 max-w-2xl">
+        Fueled by curiosity, creativity, and an endless love for problem-solving.
       </p>
-      <a
-        href="#projects"
-        className="mt-8 px-6 py-3 border border-primary rounded hover:bg-secondary"
-      >
-        Check out my work
-      </a>
+      <div className="py-2 flex justify-normal container space-x-4">
+        <HollowButton hrefValue="#about" content="About Me" fancy />
+        <HollowButton hrefValue="#skills" content="Skills" fancy />
+        <HollowButton hrefValue="#experience" content="Experience" fancy />
+      </div>
     </section>
   );
 };
