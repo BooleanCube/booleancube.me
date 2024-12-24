@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import { Link } from "@chakra-ui/react"
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 // import { Menu } from "@chakra-ui/react"
 
-import Button from "./StyledButton"
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
-    console.log("im in");
     setIsOpen(!isOpen);
   };
+
+  const location = useLocation();
 
   const links = [
     {
@@ -40,13 +40,17 @@ const Navbar: React.FC = () => {
           {links.map((link, index: number) => {
             return (
               <h3 key={index}>
-                <Link href={link.path} className="text-primary hover:text-accent">
+                <Link
+                  to={link.path}
+                  className={`${
+                    location.pathname === link.path ? "selected-nav" : "text-primary"
+                  } hover:text-accent`}
+                >
                   <span className="text-secondary">0{index+1}.</span> {link.name}
                 </Link>
               </h3>
             )
           })}
-          <Button hrefValue="#contact" content="Archive" fancy={false} />
         </nav>
       </div>
       
@@ -68,14 +72,15 @@ const Navbar: React.FC = () => {
           {links.map((link, index) => (
             <h3 key={index}>
               <Link
-                href={link.path}
-                className="text-primary hover:text-accent text-lg"
+                to={link.path}
+                className={`${
+                  location.pathname === link.path ? "selected-nav" : "text-primary"
+                } hover:text-accent`}
               >
                 <span className="text-secondary">0{index + 1}.</span> {link.name}
               </Link>
             </h3>
           ))}
-          <Button hrefValue="#contact" content="Archive" fancy={false} />
         </nav>
       </div>
     </>

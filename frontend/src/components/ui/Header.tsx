@@ -1,7 +1,7 @@
 import React from "react"
-import { Link, Image } from "@chakra-ui/react"
+import { Image } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 import Navbar from "./Navbar";
-// import { useLocation }
 
 import LogoImage from "../../assets/booleancube.png"
 
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const Logo: React.FC = () => {
     return (
       <div className="glow-container">
-        <Link href="/" className="flex gap-2 logo" data-no-underline>
+        <Link to="/" className="flex items-center gap-2 logo" data-no-underline>
           <Image src={LogoImage} width="3rem" />
           <h1 className="text-xl font-bold">BooleanCube</h1>
         </Link>

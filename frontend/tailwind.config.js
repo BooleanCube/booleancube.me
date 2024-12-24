@@ -88,6 +88,7 @@ export default {
       },
     },
     fontFamily: {
+      jetbrains: ["JetBrains Mono", "serif"],
       work: ["Work Sans", "serif"],
       inter: ["Inter", "serif"],
       poppins: ["Poppins", "serif"],
